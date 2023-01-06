@@ -5,7 +5,7 @@ import { samplePhonesData } from "@utils/sample-data";
 
 const phonesApi = (_req: NextApiRequest, res: NextApiResponse) => {
   const searchText = _req.query?.search || "";
-  const page = Number(_req.query?.page);
+  const page = Number(_req.query?.page ?? 1);
   let sampleData = samplePhonesData
   
   if(getCookie(_req, SAMPLE_DATA_COOKIE_KEY)) {
