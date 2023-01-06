@@ -8,6 +8,7 @@ import { Dialog } from "@headlessui/react";
 import { client } from "@libs/fetch";
 import { ExclamationIcon, PencilIcon, TrashIcon } from "@libs/icons";
 import twConfig from "@libs/tailwind-config";
+import { Spinner } from "./skeleton/spinner";
 
 const DeleteModal = ({ isOpen, onClose, phoneId }) => {
   const onSubmit = () => {
@@ -82,7 +83,12 @@ const PhonesList = ({ searchFilter }) => {
 
   const colors = twConfig.theme.colors;
 
-  if (!phonesData) return null;
+  if (!phonesData) return (
+    <div className="flex flex-col items-center p-3">
+      <Spinner />
+      <p className="pt-2">Carregando...</p>
+    </div>
+  )
 
   return (
     <div>
