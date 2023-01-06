@@ -86,7 +86,7 @@ const PhonesList = ({ searchFilter }) => {
   if (!phonesData) return (
     <div className="flex flex-col items-center p-3">
       <Spinner />
-      <p className="pt-2">Carregando...</p>
+      <p className="pt-2">Loading...</p>
     </div>
   )
 
