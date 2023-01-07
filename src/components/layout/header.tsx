@@ -9,7 +9,7 @@ const Header = () => {
           <div className="flex justify-start">
             <Link href="/">
               <span className="sr-only">Telecom Carrier</span>
-              <AcademicCapIcon color="#333" width={30} height={30} />
+              <AcademicCapIcon color="#333" hoverColor="#3767E2" width={30} height={30} />
             </Link>
           </div>
           <nav className="space-x-10 flex flex-1 justify-center">
